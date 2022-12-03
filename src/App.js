@@ -6,6 +6,7 @@ import Features from "./pages/Features"
 import { Route, Routes } from "react-router-dom"
 
 function App() {
+  console.log(window.location.pathname)
   return (
     <div className="App">
       <Navbar/>
