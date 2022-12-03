@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/reactapp/home/static/css/main.073c9b0a.css",
-    "main.js": "/reactapp/home/static/js/main.f27f7129.js",
-    "static/media/shoes.jpg": "/reactapp/home/static/media/shoes.8e040647b419a9b81d5a.jpg",
-    "static/media/womens.jpg": "/reactapp/home/static/media/womens.919248ade983101bae22.jpg",
-    "static/media/mens.jpg": "/reactapp/home/static/media/mens.ac43c498a3eb2ce8c2f2.jpg",
-    "index.html": "/reactapp/home/index.html",
-    "main.073c9b0a.css.map": "/reactapp/home/static/css/main.073c9b0a.css.map",
-    "main.f27f7129.js.map": "/reactapp/home/static/js/main.f27f7129.js.map"
+    "main.css": "/reactapp/static/css/main.073c9b0a.css",
+    "main.js": "/reactapp/static/js/main.5e281ab2.js",
+    "static/media/shoes.jpg": "/reactapp/static/media/shoes.8e040647b419a9b81d5a.jpg",
+    "static/media/womens.jpg": "/reactapp/static/media/womens.919248ade983101bae22.jpg",
+    "static/media/mens.jpg": "/reactapp/static/media/mens.ac43c498a3eb2ce8c2f2.jpg",
+    "index.html": "/reactapp/index.html",
+    "main.073c9b0a.css.map": "/reactapp/static/css/main.073c9b0a.css.map",
+    "main.5e281ab2.js.map": "/reactapp/static/js/main.5e281ab2.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.f27f7129.js"
+    "static/js/main.5e281ab2.js"
   ]
 }
