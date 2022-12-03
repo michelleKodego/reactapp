@@ -90,7 +90,7 @@ function Student() {
     return(
         <div>
             <h1>Student's List</h1>
-            <form >
+            <form action="">
                 <input type="text" name="fname" value={fname} onChange = {(e) => setFname(e.target.value)} />
                 <input type="text" name="lname" value={lname} onChange = {(e) => setLname(e.target.value)}/>
                 <input type="number" name="age" value={age} onChange = {(e) => setAge(e.target.value)}/>

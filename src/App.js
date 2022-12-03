@@ -5,7 +5,7 @@ import Home from "./pages/Home"
 import Features from "./pages/Features"
 import { Route, Routes } from "react-router-dom"
 
-function App() {
+function App() { 
   console.log(window.location.pathname)
   return (
     <div className="App">
