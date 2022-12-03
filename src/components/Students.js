@@ -1,4 +1,4 @@
-import {  useEffect , useState} from 'react'; //this
+import {   useState, useEffect} from 'react'; //this
 import axios from 'axios';
 
 function Student() {
@@ -7,7 +7,7 @@ function Student() {
     const [age, setAge] = useState();
     const [students, setStudents] = useState([]); //this
 
-    //useEffect (function, param - dependency) - every refresh 
+    //useEffect (function, param - dependency) - every refresh
     useEffect(()=>{
         const url = 'http://localhost/sat-app/db.php'; //link to db
         axios.get(url).then((response)=>{
@@ -16,7 +16,8 @@ function Student() {
         })
     },[]) // this
 
-    const submitBtn = function(){
+    const submitBtn = function(e){
+        e.preventDefault();
         let getData = new FormData();
         getData.append('fname',fname); //key-value pairs
         getData.append('lname',lname); //key-value pairs
@@ -37,7 +38,7 @@ function Student() {
             })
         });
     }
-   
+
     const delBtn = function(e){
         //alert (e.currentTarget.id);
         let getData = new FormData();
@@ -60,7 +61,7 @@ function Student() {
             console.log(error);
         });
     }
-    
+
     const upBtn = function(e){
         alert (e.currentTarget.title);
         let getData = new FormData();
@@ -70,19 +71,19 @@ function Student() {
         getData.append('age',document.getElementById('age'+e.currentTarget.title).value);
         getData.append('function', 'update');
         axios({
-            method: 'POST', 
-            url: 'http://localhost/sat-app/db.php', 
-            data: getData , 
+            method: 'POST',
+            url: 'http://localhost/sat-app/db.php',
+            data: getData ,
             config: 'Content-Type ="multipart/form-data"'
         }).then(function(result){
             alert("successfully updated!");
-            
+
         }).catch(function(error){
             alert ("mali");
             console.log(error);
         })
     }
-    
+
 
 
 
@@ -95,7 +96,7 @@ function Student() {
                 <input type="text" name="lname" value={lname} onChange = {(e) => setLname(e.target.value)}/>
                 <input type="number" name="age" value={age} onChange = {(e) => setAge(e.target.value)}/>
                 <input type="submit" onClick={submitBtn} />
-               
+
             </form>
             <table>
                 <thead>
@@ -109,7 +110,7 @@ function Student() {
                   {students.map((val)=>{
                     return(
                     <tr key={val.stud_id}>
-                        <td><input id ={'fname'+val.stud_id} defaultValue={val.firstname}  /></td> 
+                        <td><input id ={'fname'+val.stud_id} defaultValue={val.firstname}  /></td>
                         <td><input defaultValue={val.lastname}  id ={'lname'+val.stud_id} /></td>
                         <td><input defaultValue={val.age}  id ={'age'+val.stud_id}/></td>
                         <td><button id={val.stud_id} onClick={delBtn}>Delete</button></td>
@@ -117,8 +118,8 @@ function Student() {
                     </tr>
                     )
                 })}
-                    
-                </tbody>  
+
+                </tbody>
 
             </table>
         </div>
